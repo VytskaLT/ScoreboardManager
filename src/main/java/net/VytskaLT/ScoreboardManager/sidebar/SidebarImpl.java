@@ -238,7 +238,7 @@ public class SidebarImpl implements Sidebar {
             if(value.length() > 48) throw new IllegalArgumentException("Value cannot be longer than 48 characters");
             this.value = value;
 
-            boolean lastColorChar = false;
+            /*boolean lastColorChar = false;
             ChatColor color = null;
             ChatColor formatColor = null;
             for (int i = 0; i < value.length(); i++) {
@@ -253,8 +253,8 @@ public class SidebarImpl implements Sidebar {
                     } else
                         formatColor = chatColor;
                 } else if(c == ChatColor.COLOR_CHAR) lastColorChar = true;
-            }
-            String reset = (color == null ? "" : color.toString()) + (formatColor == null ? "" : formatColor.toString());
+            }*/
+            String reset = ChatColor.getLastColors(value);
 
             player = lineColors.get(line) + ChatColor.RESET.toString() + reset;
             if (value.length() <= 16) {
