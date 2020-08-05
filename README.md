@@ -3,7 +3,7 @@ A Scoreboard manager intended for use in my server.
 ## Requirements
 Spigot 1.8.8 and ProtocolLib
 ## Installation
-Get the jar by building the project with `mvn clean install` or just 
+Get the jar by building the project with `mvn clean install` or just get it from releases and put it in your plugins folder.
 ## Examples
 ### TeamManager
 ```java
