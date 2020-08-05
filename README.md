@@ -27,7 +27,8 @@ new BukkitRunnable() {
     public void run() {
         // Make and set a different TeamInfo for a player
         TeamInfo teamInfo = team.setTeamInfo(player,
-            new TeamInfoBuilder().displayName("Test2").prefix("Test2 ").suffix(" test2").addEntry(player.getName()).build() // If you want, you can build a TeamInfo with a builder.
+            new TeamInfoBuilder().displayName("Test2").prefix("Test2 ").suffix(" test2")
+                .addEntry(player.getName()).build() // If you want, you can build a TeamInfo with a builder.
         );
     }
 }.runTaskLater(this, 20*5);
