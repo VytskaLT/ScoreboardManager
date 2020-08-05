@@ -6,7 +6,7 @@
 
     <groupId>net.VytskaLT</groupId>
     <artifactId>ScoreboardManager</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
 
     <build>
         <plugins>
@@ -34,7 +34,7 @@
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
-            <artifactId>spigot</artifactId>
+            <artifactId>spigot-api</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
