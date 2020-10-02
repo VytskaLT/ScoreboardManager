@@ -33,7 +33,7 @@ public class TeamManager implements Destroyable {
      *
      * @param players players to add to team manager.
      * @param checkManagers whether to remove players that already are in a team manager.
-     * @deprecated should only be used by <code>Sidebar</code>.
+     * @deprecated should only be used by {@link net.VytskaLT.ScoreboardManager.sidebar.Sidebar}.
      */
     @Deprecated
     public TeamManager(Iterable<Player> players, boolean checkManagers) {
