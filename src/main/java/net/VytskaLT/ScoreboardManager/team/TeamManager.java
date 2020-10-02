@@ -210,7 +210,7 @@ public class TeamManager implements Destroyable {
     private void checkManagers(Player player) {
         if (checkManagers)
             plugin.teamManagers.forEach(manager -> {
-                if (manager.checkManagers)
+                if (manager != this && manager.checkManagers)
                     manager.removePlayer(player);
             });
     }
