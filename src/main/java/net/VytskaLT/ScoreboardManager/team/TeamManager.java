@@ -38,13 +38,14 @@ public class TeamManager implements Destroyable {
     @Deprecated
     public TeamManager(Iterable<Player> players, boolean checkManagers) {
         this.checkManagers = checkManagers;
+        plugin = ScoreboardManagerPlugin.getPlugin(ScoreboardManagerPlugin.class);
+
         if (players != null && checkManagers)
             for (Player player : players) {
                 checkManagers(player);
                 this.players.add(player);
             }
 
-        plugin = ScoreboardManagerPlugin.getPlugin(ScoreboardManagerPlugin.class);
         Preconditions.checkNotNull(plugin, "Plugin not initialized. Did you put it in your plugins folder?");
         plugin.teamManagers.add(this);
     }
