@@ -39,6 +39,7 @@ public class TeamManager implements Destroyable {
     public TeamManager(Iterable<Player> players, boolean checkManagers) {
         this.checkManagers = checkManagers;
         plugin = ScoreboardManagerPlugin.getPlugin(ScoreboardManagerPlugin.class);
+        Preconditions.checkNotNull(plugin, "Plugin not initialized. Did you put it in your plugins folder?");
 
         if (players != null && checkManagers)
             for (Player player : players) {
@@ -46,7 +47,7 @@ public class TeamManager implements Destroyable {
                 this.players.add(player);
             }
 
-        Preconditions.checkNotNull(plugin, "Plugin not initialized. Did you put it in your plugins folder?");
+
         plugin.teamManagers.add(this);
     }
 
