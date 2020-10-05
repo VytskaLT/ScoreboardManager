@@ -24,7 +24,7 @@ public class TeamManager implements Destroyable {
     /**
      * @param players players to add to team manager.
      */
-    public TeamManager(Iterable<Player> players) {
+    public TeamManager(Iterable<? extends Player> players) {
         this(players, true);
     }
 
@@ -36,7 +36,7 @@ public class TeamManager implements Destroyable {
      * @deprecated should only be used by {@link net.VytskaLT.ScoreboardManager.sidebar.Sidebar}.
      */
     @Deprecated
-    public TeamManager(Iterable<Player> players, boolean checkManagers) {
+    public TeamManager(Iterable<? extends Player> players, boolean checkManagers) {
         this.checkManagers = checkManagers;
         plugin = ScoreboardManagerPlugin.getPlugin(ScoreboardManagerPlugin.class);
         Preconditions.checkNotNull(plugin, "Plugin not initialized. Did you put it in your plugins folder?");
