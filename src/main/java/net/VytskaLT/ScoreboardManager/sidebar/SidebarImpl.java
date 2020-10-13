@@ -135,7 +135,7 @@ public class SidebarImpl implements Sidebar {
 
         Line sLine = lines[line];
 
-        if (sLine.value.equals(value))
+        if (value.equals(sLine.value))
             return;
 
         sLine.oldPlayer = sLine.player;
